@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather-application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body
+    style="background-image: linear-gradient(rgb(0,0,20), rgb(128,128,128), rgb(0, 0, 0)); background-attachment: fixed;">
+    <ul>
+        <li><a href="/weather-application/index.html">🌧️</a></li>
+        <li><a href="/weather-application/index.html">Weather</a></li>
+        <li>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    style="height:40px;font-size:14pt;border-radius: 10px;text-align: center;background-color: rgb(0,0,0,0.5);"><span class="tab"></span>
+                <button style="border-radius: 10px; background-color: blue; padding: 10px 20px; text-align: center; display: inline-block;
+            font-size: 16px;" type="submit">Search</button>
+            </form>
+        </li>
+    </ul>
+    <h1 style="text-align: center; color: white; font-family: monospace;">My Weather - App</h1>
+    <div style="display: flex;">
+    <a href="detailed.html" class="weather-cards" style="background-image: url('./images/sunny.png'); 
+                                                            text-decoration: none; 
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            border-radius: 10px;
+                                                            opacity: 0.9;
+                                                            margin: 30px 30px;">
+        <div class="card" style="width: 18rem;">
+            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                <source src="/weather-application/images/sunny.mp4" type="video/mp4">
+              </video>
+            <div class="card-body"><br>
+                <h1 class="card-title">Chandigarh</h1>
+                <h3 style="text-decoration: none; color: black; text-align: center;">Mostly Sunny</h3>
+                <p style="color: black; text-align: right; margin-right: 10px;">39 °C</p>
+                <table style="color: black; background-color: rgb(135,206,255,0.4);">
+                    <tr>
+                        <th>Su</th>
+                        <th>M</th>
+                        <th>Tu</th>
+                        <th>Wed</th>
+                        <th>Th</th>
+                        <th>F</th>
+                        <th>Sa</th>
+                    </tr>
+                    <tr>
+                        <th>25</th>
+                        <th>26</th>
+                        <th>27</th>
+                        <th>25</th>
+                        <th>24</th>
+                        <th>26</th>
+                        <th>28</th>
+                    </tr>
+                    <tr>
+                        <th>43</th>
+                        <th>46</th>
+                        <th>47</th>
+                        <th>45</th>
+                        <th>44</th>
+                        <th>46</th>
+                        <th>40</th>
+                    </tr>
+                    <tr>
+                        <th>☀️</th>
+                        <th>⛅️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </a>
+    <a href="detailed.html" class="weather-cards" style="background-image: url('./images/rain.png');
+                                                        text-decoration: none; 
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        border-radius: 10px;
+                                                        opacity: 0.9;
+                                                        margin: 30px 30px;">
+        <div class="card" style="width: 18rem;">
+            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                <source src="/weather-application/images/rainy.mp4" type="video/mp4">
+              </video>
+            <div class="card-body"><br>
+                <h1 class="card-title">Delhi</h1>
+                <h3 style="text-decoration: none; color: black; text-align: center;">Expected Rain - Showers</h3>
+                <p style="color: black; text-align: right; margin-right: 10px;">27 °C</p>
+                <table style="color: black; background-color: rgb(128,128,128,0.2);">
+                    <tr>
+                        <th>Su</th>
+                        <th>M</th>
+                        <th>Tu</th>
+                        <th>Wed</th>
+                        <th>Th</th>
+                        <th>F</th>
+                        <th>Sa</th>
+                    </tr>
+                    <tr>
+                        <th>22</th>
+                        <th>23</th>
+                        <th>21</th>
+                        <th>24</th>
+                        <th>20</th>
+                        <th>23</th>
+                        <th>26</th>
+                    </tr>
+                    <tr>
+                        <th>35</th>
+                        <th>36</th>
+                        <th>37</th>
+                        <th>35</th>
+                        <th>34</th>
+                        <th>36</th>
+                        <th>40</th>
+                    </tr>
+                    <tr>
+                        <th>🌧️</th>
+                        <th>⛈️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </a>
+    <a href="detailed.html" class="weather-cards" style="background-image: url('./images/partiallycloudy.png');
+                                                        text-decoration: none; 
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        border-radius: 10px;
+                                                        opacity: 0.9;
+                                                        margin: 30px 30px;">
+        <div class="card" style="width: 18rem;">
+            <video id="background-video" autoplay loop muted>
+                <source src="/weather-application/images/partiallycloudy.mp4" type="video/mp4">
+              </video>
+            <div class="card-body"><br>
+                <h1 class="card-title">Banglore</h1>
+                <h3 style="text-decoration: none; color: black; text-align: center;">Partially Cloudy</h3>
+                <p style="color: black; text-align: right; margin-right: 10px;">37 °C</p>
+                <table style="color: black; background-color: rgb(128,128,128,0.2);">
+                    <tr>
+                        <th>Su</th>
+                        <th>M</th>
+                        <th>Tu</th>
+                        <th>Wed</th>
+                        <th>Th</th>
+                        <th>F</th>
+                        <th>Sa</th>
+                    </tr>
+                    <tr>
+                        <th>32</th>
+                        <th>33</th>
+                        <th>31</th>
+                        <th>34</th>
+                        <th>30</th>
+                        <th>33</th>
+                        <th>36</th>
+                    </tr>
+                    <tr>
+                        <th>35</th>
+                        <th>36</th>
+                        <th>37</th>
+                        <th>35</th>
+                        <th>34</th>
+                        <th>36</th>
+                        <th>40</th>
+                    </tr>
+                    <tr>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>🌤️</th>
+                        <th>🌤️</th>
+                        <th>🌤️</th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </a>
+    <a href="detailed.html" class="weather-cards" style="background-image: url('./images/partiallycloudy.png');
+                                                        text-decoration: none; 
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        border-radius: 10px;
+                                                        opacity: 0.9;
+                                                        margin: 30px 30px;">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body"><br>
+                <h1 class="card-title">New York City</h1>
+                <h3 style="text-decoration: none; color: black; text-align: center;">Partially Cloudy</h3>
+                <p style="color: black; text-align: right; margin-right: 10px;">27 °C</p>
+                <table style="color: black; background-color: rgb(128,128,128,0.2);">
+                    <tr>
+                        <th>Su</th>
+                        <th>M</th>
+                        <th>Tu</th>
+                        <th>Wed</th>
+                        <th>Th</th>
+                        <th>F</th>
+                        <th>Sa</th>
+                    </tr>
+                    <tr>
+                        <th>32</th>
+                        <th>33</th>
+                        <th>31</th>
+                        <th>34</th>
+                        <th>30</th>
+                        <th>33</th>
+                        <th>36</th>
+                    </tr>
+                    <tr>
+                        <th>35</th>
+                        <th>36</th>
+                        <th>37</th>
+                        <th>35</th>
+                        <th>34</th>
+                        <th>36</th>
+                        <th>40</th>
+                    </tr>
+                    <tr>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>🌤️</th>
+                        <th>🌤️</th>
+                        <th>🌤️</th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </a>
+</div>
+<div style="display: flex;">
+    <a href="detailed.html" class="weather-cards" style="background-image: url('./images/clearnight.png'); 
+                                                            text-decoration: none; 
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            border-radius: 10px;
+                                                            opacity: 0.9;
+                                                            margin: 30px 30px;">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body"><br>
+                <h1 class="card-title" style="color: white;">Sydney</h1>
+                <h3 style="text-decoration: none; color: white; text-align: center;">Clear</h3>
+                <p style="color: white; text-align: right; margin-right: 10px;">11 °C</p>
+                <table style="color: white; background-color: rgb(135,206,255,0.4);">
+                    <tr>
+                        <th>Su</th>
+                        <th>M</th>
+                        <th>Tu</th>
+                        <th>Wed</th>
+                        <th>Th</th>
+                        <th>F</th>
+                        <th>Sa</th>
+                    </tr>
+                    <tr>
+                        <th>25</th>
+                        <th>26</th>
+                        <th>27</th>
+                        <th>25</th>
+                        <th>24</th>
+                        <th>26</th>
+                        <th>28</th>
+                    </tr>
+                    <tr>
+                        <th>43</th>
+                        <th>46</th>
+                        <th>47</th>
+                        <th>45</th>
+                        <th>44</th>
+                        <th>46</th>
+                        <th>40</th>
+                    </tr>
+                    <tr>
+                        <th>☀️</th>
+                        <th>⛅️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </a>
+    <a href="detailed.html" class="weather-cards" style="background-image: url('./images/rain.png');
+                                                        text-decoration: none; 
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        border-radius: 10px;
+                                                        opacity: 0.9;
+                                                        margin: 30px 30px;">
+        <div class="card" style="width: 18rem;">
+            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                <source src="/weather-application/images/thunder.mp4" type="video/mp4">
+              </video>
+            <div class="card-body"><br>
+                <h1 class="card-title">Seattle</h1>
+                <h3 style="text-decoration: none; color: black; text-align: center;">Expected Rain - Showers</h3>
+                <p style="color: black; text-align: right; margin-right: 10px;">27 °C</p>
+                <table style="color: black; background-color: rgb(128,128,128,0.2);">
+                    <tr>
+                        <th>Su</th>
+                        <th>M</th>
+                        <th>Tu</th>
+                        <th>Wed</th>
+                        <th>Th</th>
+                        <th>F</th>
+                        <th>Sa</th>
+                    </tr>
+                    <tr>
+                        <th>22</th>
+                        <th>23</th>
+                        <th>21</th>
+                        <th>24</th>
+                        <th>20</th>
+                        <th>23</th>
+                        <th>26</th>
+                    </tr>
+                    <tr>
+                        <th>35</th>
+                        <th>36</th>
+                        <th>37</th>
+                        <th>35</th>
+                        <th>34</th>
+                        <th>36</th>
+                        <th>40</th>
+                    </tr>
+                    <tr>
+                        <th>🌧️</th>
+                        <th>⛈️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                        <th>🌧️</th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </a>
+    <a href="detailed.html" class="weather-cards" style="background-image: url('./images/partiallycloudy.png');
+                                                        text-decoration: none; 
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        border-radius: 10px;
+                                                        opacity: 0.9;
+                                                        margin: 30px 30px;">
+        <div class="card" style="width: 18rem;">
+            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                <source src="/weather-application/images/goldenhour.mp4" type="video/mp4">
+              </video>
+            <div class="card-body"><br>
+                <h1 class="card-title">London</h1>
+                <h3 style="text-decoration: none; color: black; text-align: center;">Partially Cloudy</h3>
+                <p style="color: black; text-align: right; margin-right: 10px;">31 °C</p>
+                <table style="color: black; background-color: rgb(128,128,128,0.2);">
+                    <tr>
+                        <th>Su</th>
+                        <th>M</th>
+                        <th>Tu</th>
+                        <th>Wed</th>
+                        <th>Th</th>
+                        <th>F</th>
+                        <th>Sa</th>
+                    </tr>
+                    <tr>
+                        <th>32</th>
+                        <th>33</th>
+                        <th>31</th>
+                        <th>34</th>
+                        <th>30</th>
+                        <th>33</th>
+                        <th>36</th>
+                    </tr>
+                    <tr>
+                        <th>35</th>
+                        <th>36</th>
+                        <th>37</th>
+                        <th>35</th>
+                        <th>34</th>
+                        <th>36</th>
+                        <th>40</th>
+                    </tr>
+                    <tr>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>🌤️</th>
+                        <th>🌤️</th>
+                        <th>🌤️</th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </a>
+    <a href="detailed.html" class="weather-cards" style="background-image: url('./images/partiallycloudy.png');
+                                                        text-decoration: none; 
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        border-radius: 10px;
+                                                        opacity: 0.9;
+                                                        margin: 30px 30px;">
+        <div class="card" style="width: 18rem;">
+            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                <source src="/weather-application/images/possiblerain.mp4" type="video/mp4">
+              </video>
+            <div class="card-body"><br>
+                <h1 class="card-title">Dubai</h1>
+                <h3 style="text-decoration: none; color: black; text-align: center;">Partially Cloudy</h3>
+                <p style="color: black; text-align: right; margin-right: 10px;">37 °C</p>
+                <table style="color: black; background-color: rgb(128,128,128,0.2);">
+                    <tr>
+                        <th>Su</th>
+                        <th>M</th>
+                        <th>Tu</th>
+                        <th>Wed</th>
+                        <th>Th</th>
+                        <th>F</th>
+                        <th>Sa</th>
+                    </tr>
+                    <tr>
+                        <th>32</th>
+                        <th>33</th>
+                        <th>31</th>
+                        <th>34</th>
+                        <th>30</th>
+                        <th>33</th>
+                        <th>36</th>
+                    </tr>
+                    <tr>
+                        <th>35</th>
+                        <th>36</th>
+                        <th>37</th>
+                        <th>35</th>
+                        <th>34</th>
+                        <th>36</th>
+                        <th>40</th>
+                    </tr>
+                    <tr>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>⛅️</th>
+                        <th>🌤️</th>
+                        <th>🌤️</th>
+                        <th>🌤️</th>
+                    </tr>
+                </table><br>
+            </div>
+        </div>
+    </a>
+</div>
+</body>
+
+</html>
+<!-- ⛅️🌤️🌥️🌦️🌧️⛈️🌩️ -->
