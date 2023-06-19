@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="search-results.css">
+</head>
+
+<body
+style="background-image: linear-gradient(rgb(0,0,20), rgb(128,128,128), rgb(0, 0, 0)); background-attachment: fixed;">
+    <ul>
+        <li><a href="/index.html">🌧️</a></li>
+        <li><a href="/index.html">Weather</a></li>
+        <li>
+            <form action="search-results.html" class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    style="height:40px;font-size:14pt;border-radius: 10px;text-align: center;background-color: rgb(0,0,0,0.5); color: white;">
+                <button style="border-radius: 10px; background-color: blue; padding: 10px 20px; text-align: center; display: inline-block;
+            font-size: 16px; color: white;" type="submit">Search</button><span class="tab"></span>
+            <a href="login.html" style="border-radius: 10px; background-color: blue; padding: 10px 20px; text-align: center; display: inline-block;
+            font-size: 16px;" type="submit">Login</a><span class="tab"></span>
+            <a href="signup.html" style="border-radius: 10px; background-color: blue; padding: 10px 20px; text-align: center; display: inline-block;
+            font-size: 16px;" type="submit">Signup</a>
+            </form>
+        </li>
+    </ul>
+    <h1>Search Results</h1>
+
+    <div>
+        <h3>Search Query: <span id="searchQuery"></span></h3>
+        <ul id="resultsList"></ul>
+    </div>
+
+    <script>
+        // Get the search query from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('q');
+
+        // Display the search query on the page
+        const searchQueryElement = document.getElementById('searchQuery');
+        searchQueryElement.textContent = searchQuery;
+
+        // Simulated search results
+        const results = [
+            'Result 1',
+            'Result 2',
+            'Result 3'
+        ];
+
+        // Display the search results on the page
+        const resultsList = document.getElementById('resultsList');
+        results.forEach(result => {
+            const li = document.createElement('li');
+            li.textContent = result;
+            resultsList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

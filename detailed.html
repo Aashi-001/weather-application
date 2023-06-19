@@ -3,9 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunny</title>
+    <title>DELHI</title>
+    <link rel="stylesheet" type="text/css" href="detailed.css">
+    <script>
+        $(document).ready(function() {
+            $("#map-container").hide().fadeIn(2000);
+            $(".hourly-weather").hide().fadeIn(1000);
+            $(".weekly-weather").hide().fadeIn(1000);
+        });
+    </script>
 </head>
-<body style="background-image: url('/weather-application/images/sunny.png'); background-repeat: no-repeat; background-size: cover;">
-    
+<body style="background-image: linear-gradient(#052236, #054b62, rgba(202, 201, 201, 0.784), #426672, #566671); background-repeat: no-repeat;background-position: center; height: 100%; width: 100%;">
+    <div class="weather-container">
+        <h1>Weather in <span id="city-name">Delhi</span></h1>
+      </div><br><br>
+    <div style="width: 100%; display: flex;">
+      <div style="width: 50%;">
+        <div class="hourly-weather">
+            <table style="color: black; background-color: rgba(0, 145, 255, 0.2); border-spacing: 30px 0; padding: 15px 15px; border-radius: 10px; border: solid 2px;">
+                <tr style="color: black; font-family: 'Courier New', Courier, monospace; font-size: 12px;">
+                    <th>1AM</th>
+                    <th>2AM</th>
+                    <th>3AM</th>
+                    <th>4AM</th>
+                    <th>5AM</th>
+                    <th>6AM</th>
+                    <th>7AM</th>
+                    <th>8AM</th>
+                    <th>9AM</th>
+                    <th>10AM</th>
+                </tr>
+                <tr>
+                    <th>22</th>
+                    <th>23</th>
+                    <th>21</th>
+                    <th>24</th>
+                    <th>20</th>
+                    <th>23</th>
+                    <th>26</th>
+                    <th>21</th>
+                    <th>21</th>
+                    <th>20</th>
+                </tr>
+                <tr>
+                    <th>🌧️</th>
+                    <th>⛈️</th>
+                    <th>🌧️</th>
+                    <th>🌧️</th>
+                    <th>🌧️</th>
+                    <th>🌧️</th>
+                    <th>🌧️</th>
+                    <th>🌧️</th>
+                    <th>🌧️</th>
+                    <th>⛈️</th>
+                </tr>
+            </table>
+        </div>
+        <div style="padding: 10px 10px;">
+            <div class="bar-graph bar-graph-horizontal bar-graph-one">
+                <div class="bar-one" style="padding: 10px 10px;">
+                  <span class="year" style="padding-right: 40px;">HUMIDITY</span>
+                  <div class="bar" data-percentage="90.6%"></div>
+                </div>
+                <div class="bar-two" style="padding: 10px 10px;">
+                  <span class="year" style="padding-right: 40px;">UV INDEX</span>
+                  <div class="bar" data-percentage="2 LOW"></div>
+                </div>
+                <div class="bar-three" style="padding: 10px 10px;">
+                  <span class="year" style="padding-right: 40px;">WIND</span>
+                  <div class="bar" data-percentage="7 KPH%"></div>
+                </div>
+                <div class="bar-four" style="padding: 10px 10px;">
+                  <span class="year" style="padding-right: 35px;">PRESSURE</span>
+                  <div class="bar" data-percentage="997 hPa"></div>
+                </div>
+                <div class="bar-five" style="padding: 10px 10px;">
+                    <span class="year" style="padding-right: 40px;">RAINFALL</span>
+                    <div class="bar" data-percentage="5 MM"></div>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-weather" style="padding: 20px 20px; margin: 20px 20px;">
+            <h1 style="font-family: monospace; font-size: 20px;">10 day forecast</h1>
+            <table style="background-color: rgba(0, 149, 255, 0.2); opacity: 0.7; border-radius: 10px; padding: 20px 20px; font-size: 20px; font-family: monospace; text-align: center; border: solid 2px;">
+                <tr>
+                    <td>Today</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>MON</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>TUE</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>WED</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>THU</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>FRI</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>SAT</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>SUN</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>MON</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+                <tr>
+                    <td>TUE</td>
+                    <td>🌧️</td>
+                    
+                </tr>
+            </table>
+          </div>
+      </div>
+      <div  style="width: 50%;">
+      <div id="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d376260.52369174757!2d77.04886384917977!3d28.595959823719163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1687170899045!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="weather-cards" style="display: flex; padding: 10px 10px; background-size: cover; color: black;">
+        <div class="weather-cards-wrapper">
+      <div class="weather-card">
+        <h1 style="font-size: 20px; font-family: monospace;">AQI</h1>
+        <h2 style="font-size: 15px; font-family: monospace;">92-satisfactory</h2>
+        <h3 style="font-size: 12px; font-family: monospace;">air quality is satisfactory.</h3>
+      </div>
+      <div  class="weather-card">
+        <h1 style="font-size: 20px; font-family: monospace;">UV INDEX</h1>
+        <h2 style="font-size: 15px; font-family: monospace;">2-LOW</h2>
+        <h3 style="font-size: 12px; font-family: monospace;">Low for the rest of the day.</h3>
+      </div>
+      <div  class="weather-card">
+        <h1 style="font-size: 20px; font-family: monospace;">SUNSET</h1>
+        <h2 style="font-size: 15px; font-family: monospace;">7:27PM</h2>
+        <h3 style="font-size: 12px; font-family: monospace;">Sunrise at 5:21AM.</h3>
+      </div>
+      <div  class="weather-card">
+        <h1 style="font-size: 20px; font-family: monospace;">FEELS LIKE</h1>
+        <h2 style="font-size: 15px; font-family: monospace;">28°C</h2>
+        <h3 style="font-size: 12px; font-family: monospace;">Humidity is making it feel hotter.</h3>
+      </div>
+      <div  class="weather-card">
+        <h1 style="font-size: 20px; font-family: monospace;">VISIBILITY</h1>
+        <h2 style="font-size: 15px; font-family: monospace;">18KM</h2>
+        <h3 style="font-size: 12px; font-family: monospace;">It's perfectly clear right now.</h3>
+      </div>
+      <div  class="weather-card">
+        <h1 style="font-size: 20px; font-family: monospace;">HUMIDITY</h1>
+        <h2 style="font-size: 15px; font-family: monospace;">49%</h2>
+        <h3 style="font-size: 12px; font-family: monospace;">The dew point is 22° right now.</h3>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
 </body>
 </html>
