@@ -1,0 +1,31 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    font-size: 30px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: none;
+  }
+  li form {
+    display: inline-block;
+    margin-left: 570px;
+    padding: 10px;
+  }
+  
+  li a:hover {
+    background-color: rgb(128,128,128,0.4);
+    border-radius: 10px;
+  }
